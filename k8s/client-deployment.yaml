@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: client-deployment
+spec:
+  replicas: 3
+  selectors:
+    component: web
+  template:
+    metadata:
+      label:
+        component: web
+    spec:
+      containers:
+        - name: client
+          image: orkhanhuseynli/multi-client
+          ports:
+            - containerPort: 3000
