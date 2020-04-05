@@ -8,10 +8,10 @@ spec:
     matchLabels:
       component: worker
   template:
-    meadata:
+    metadata:
       labels:
         component: worker
     spec:
-      conatiner:
+      containers:
         - name: worker
           image: orkhanhuseynli/multi-worker
